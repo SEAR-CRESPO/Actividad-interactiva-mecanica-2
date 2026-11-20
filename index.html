@@ -811,6 +811,269 @@ input.range {
   }
 }
 
+  
+/* ---------- ESTILOS NUEVOS (IMÁGENES DE REFERENCIA) ---------- */
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  border: 2px solid #e2e8f0;
+  color: #334155;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+}
+
+.pill-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.09);
+}
+
+.pill-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.pill-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.pill-btn.blue {
+  border-color: #2563eb;
+  color: #2563eb;
+  background: #ffffff;
+}
+
+.pill-btn.blue:hover:not(:disabled) {
+  background: #eff6ff;
+}
+
+.pill-btn.red {
+  border-color: #dc2626;
+  color: #dc2626;
+  background: #ffffff;
+}
+
+.pill-btn.red:hover:not(:disabled) {
+  background: #fef2f2;
+}
+
+.pill-btn.seg-dry.active {
+  border-color: #f59e0b;
+  color: #b45309;
+  background: #fffbeb;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+.pill-btn.seg-wet.active {
+  border-color: #2563eb;
+  color: #1d4ed8;
+  background: #eff6ff;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Indicador de velocidad y banner de nivel 1 */
+.speed-box {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.speed-title {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 3px;
+  letter-spacing: -0.01em;
+}
+
+.speed-track {
+  width: 130px;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.speed-bar {
+  height: 100%;
+  width: 0%;
+  background: #16a34a;
+  border-radius: 999px;
+  transition: width 0.08s linear;
+}
+
+.bus-banner {
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  color: #dc2626;
+  font-weight: 900;
+  font-size: clamp(0.95rem, 3.8vw, 1.35rem);
+  letter-spacing: -0.02em;
+  text-shadow:
+    2px 2px 0 #ffffff,
+    -2px -2px 0 #ffffff,
+    2px -2px 0 #ffffff,
+    -2px 2px 0 #ffffff,
+    0 2px 0 #ffffff,
+    0 -2px 0 #ffffff,
+    2px 0 0 #ffffff,
+    -2px 0 0 #ffffff,
+    0 4px 10px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  z-index: 5;
+}
+
+.bus-banner.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Controles carritos (Nivel 2) */
+.carts-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  background: #ffffff;
+  padding: 10px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.force-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.force-label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.force-slider {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.carts-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.phone-flick-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+  
+/* Indicador de velocidad de la lista (Nivel 4 - Imagen adjunta) */
+.speed-indicator-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin: 6px auto 8px;
+  width: 100%;
+}
+
+.speed-indicator-title {
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: #034694;
+  letter-spacing: -0.01em;
+}
+
+.speed-indicator-track {
+  width: min(200px, 80%);
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.1);
+}
+
+.speed-indicator-bar {
+  height: 100%;
+  width: 0%;
+  background: #16a34a;
+  border-radius: 999px;
+  transition: width 0.04s linear;
+}
+
+/* Control de fricción compacto (4 pasos) */
+.friction-control-box {
+  width: min(230px, 84%);
+  margin: 4px auto 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.compact-range {
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.range-steps-4 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  padding: 0 2px;
+}
+
   </style>
 </head>
 <body>
@@ -864,16 +1127,16 @@ input.range {
       text: 'Los objetos siguen haciendo lo que ya hacían hasta que algo los cambia. Si un bus frena de golpe, los pasajeros siguen yendo hacia adelante.',
       curiosity: 'Dato curioso: la cinemática estudia el movimiento y la dinámica estudia las fuerzas que lo producen.',
       why: 'Tu cuerpo va a la misma velocidad que el bus. Cuando el bus frena, tus pies frenan con él, pero tu cuerpo sigue de largo un instante. Por eso te inclinas hacia adelante.',
-      question: 'Cuando el bus frena de golpe, ¿hacia dónde se van los pasajeros?',
-      shortQuestion: '¿Hacia dónde van los pasajeros al frenar?',
+      question: '¿Por qué el pasajero se inclina hacia adelante al frenar el bus, si nadie lo empuja físicamente?',
+      shortQuestion: '¿Por qué se inclina el pasajero al frenar?',
       options: [
-        { text: 'Hacia atrás', correct: false },
-        { text: 'Hacia adelante', correct: true },
-        { text: 'Se quedan quietos', correct: false }
+        { text: 'Porque una fuerza invisible generada por el frenado lo empuja al parabrisas', correct: false },
+        { text: 'Por inercia: su cuerpo ya tenía la velocidad del bus y tiende a mantenerla', correct: true },
+        { text: 'Porque el aire acumulado dentro del bus lo arrastra hacia adelante al parar', correct: false }
       ],
-      hint: 'Fíjate en lo que acabas de ver al tocar Frenar.',
-      explain: 'El pasajero sigue el movimiento del bus un instante y por eso se va hacia adelante.',
-      review: 'Primera ley (inercia): un objeto sigue en reposo o en movimiento hasta que una fuerza lo cambia.',
+      hint: 'Recuerda la primera ley: un cuerpo en movimiento continúa moviéndose en línea recta a menos que una fuerza neta actúe sobre él.',
+      explain: 'Ninguna fuerza empuja al pasajero hacia adelante. Por inercia, su cuerpo simplemente continúa con la velocidad que traía el bus hasta que una fuerza externa lo detiene.',
+      review: 'Primera ley (inercia): un objeto conserva su velocidad hasta que una fuerza neta externa modifique su estado.',
       mount: mountBus
     },
     {
@@ -885,16 +1148,16 @@ input.range {
       text: 'Con la misma fuerza, el carrito con menos masa acelera más. El carrito lleno reparte esa fuerza entre más masa y avanza menos.',
       curiosity: 'Dato curioso: la estática estudia los cuerpos en equilibrio, es decir, sin aceleración.',
       why: 'La misma fuerza sobre menos masa produce más aceleración: F = m · a. Por eso el carrito vacío arranca más rápido y llega más lejos.',
-      question: '¿Qué carrito es más fácil de empujar?',
-      shortQuestion: '¿Qué carrito es más fácil de empujar?',
+      question: 'Si quisieras que el carrito lleno acelere al mismo ritmo que el carrito vacío, ¿qué tendrías que hacer según F = m · a?',
+      shortQuestion: '¿Cómo lograr igual aceleración en el lleno?',
       options: [
-        { text: 'El vacío', correct: true },
-        { text: 'El lleno', correct: false },
-        { text: 'Los dos igual', correct: false }
+        { text: 'Aplicarle una fuerza mayor para compensar su mayor masa', correct: true },
+        { text: 'Empujarlo durante menos tiempo para que no acumule resistencia', correct: false },
+        { text: 'Aplicarle la misma fuerza, ya que la aceleración no depende de la masa', correct: false }
       ],
-      hint: 'Piensa en cuál te cansaría menos al empujarlo.',
-      explain: 'Con la misma fuerza, el carrito con menos masa acelera más. Al lleno le cuesta arrancar.',
-      review: 'Segunda ley: F = m · a. A igual fuerza, más masa significa menos aceleración.',
+      hint: 'Fíjate en F = m · a: si la masa (m) es mayor y quieres igual aceleración (a), la fuerza (F) aplicada debe incrementarse.',
+      explain: '¡Muy bien! Como el carrito lleno tiene más masa, requiere proporcionalmente más fuerza para alcanzar la misma aceleración que el carrito liviano (F = m · a).',
+      review: 'Segunda ley (F = m · a): para obtener una misma aceleración, a mayor masa se requiere mayor fuerza.',
       mount: mountCarts
     },
     {
@@ -906,16 +1169,16 @@ input.range {
       text: 'Cuando empujas algo, eso te empuja a ti con la misma fuerza y en sentido contrario. Por eso, al saltar de un bote, el bote se va hacia atrás.',
       curiosity: 'Dato curioso: las fuerzas siempre aparecen en pareja, nunca solas.',
       why: 'Al saltar empujas el bote hacia atrás. El bote te empuja hacia adelante con la misma fuerza, y por eso llegas al muelle.',
-      question: 'Al saltar del bote hacia el muelle, ¿qué le pasa al bote?',
-      shortQuestion: '¿Qué le pasa al bote al saltar?',
+      question: 'Según la tercera ley de Newton (acción y reacción), ¿cómo son las fuerzas que actúan entre tú y el bote al saltar?',
+      shortQuestion: '¿Cómo son las fuerzas entre tú y el bote?',
       options: [
-        { text: 'Se mueve hacia atrás', correct: true },
-        { text: 'Se mueve hacia adelante', correct: false },
-        { text: 'No se mueve', correct: false }
+        { text: 'La fuerza sobre ti es mayor que la que recibe el bote, y por eso logras llegar al muelle', correct: false },
+        { text: 'Tienen exactamente la misma magnitud pero sentidos opuestos: tú empujas el bote y el bote te empuja a ti', correct: true },
+        { text: 'Primero tú aplicas fuerza al bote y un instante después el bote reacciona sobre ti', correct: false }
       ],
-      hint: 'Mira hacia dónde se fue el bote en la animación.',
-      explain: 'Tú empujas el bote hacia atrás y el bote te empuja hacia adelante: son un par de fuerzas.',
-      review: 'Tercera ley: a toda acción le corresponde una reacción igual y opuesta.',
+      hint: 'Las fuerzas de acción y reacción son simultáneas, tienen exactamente el mismo valor numérico y actúan en direcciones contrarias sobre cuerpos distintos.',
+      explain: '¡Correcto! Ambas fuerzas son simultáneas y de igual magnitud: la fuerza con que tus pies empujan el bote hacia atrás es idéntica a la que el bote ejerce sobre ti hacia adelante.',
+      review: 'Tercera ley: a toda acción corresponde una reacción simultánea, de igual magnitud y en sentido opuesto.',
       mount: mountBoat
     },
     {
@@ -927,16 +1190,16 @@ input.range {
       text: 'Las apps usan física: cuando deslizas una lista y sueltas, sigue moviéndose y se frena poco a poco, como una pelota que rueda.',
       curiosity: 'Dato curioso: ese frenado suave se llama desplazamiento con inercia (momentum scrolling).',
       why: 'Tu dedo le da velocidad a la lista. Al soltar, una fricción simulada la va frenando hasta detenerla. Si hay poca fricción, se desliza más.',
-      question: 'Si deslizas la lista y sueltas el dedo, ¿qué hace?',
-      shortQuestion: '¿Qué hace la lista al soltar el dedo?',
+      question: 'Si una aplicación eliminara por completo su modelo de fricción simulada, ¿qué le ocurriría a la lista al soltar el dedo tras deslizarla?',
+      shortQuestion: '¿Qué pasaría con la lista sin fricción simulada?',
       options: [
-        { text: 'Se detiene al instante', correct: false },
-        { text: 'Sigue un poco y se frena', correct: true },
-        { text: 'Se mueve para siempre', correct: false }
+        { text: 'Se detendría en seco en el milisegundo exacto en que despegas el dedo', correct: false },
+        { text: 'Continuaría desplazándose indefinidamente a velocidad constante por inercia', correct: true },
+        { text: 'Invertiría su dirección y regresaría sola al punto donde empezó', correct: false }
       ],
-      hint: 'Piensa en cómo se siente al usar tu propio celular.',
-      explain: 'La lista conserva la velocidad del dedo y la fricción la va deteniendo poco a poco.',
-      review: 'Las apps simulan fricción para que las listas se sientan naturales al deslizar.',
+      hint: 'Imagina un objeto que se desliza en el espacio exterior sin ninguna fricción ni resistencia: una vez en marcha, ¿qué le ocurriría?',
+      explain: '¡Excelente deducción! Sin fricción, la inercia pura haría que la lista se mueva para siempre a velocidad constante. El software introduce una fuerza de frenado artificial para que resulte manejable y natural.',
+      review: 'Las apps simulan fricción para frenar la inercia del desplazamiento y lograr que el deslizamiento se sienta natural.',
       mount: mountPhone
     }
   ];
@@ -1451,12 +1714,18 @@ input.range {
 
   function mountBus({ stage, controls, result, onGoal }) {
     stage.innerHTML = `
+      <div class="speed-box">
+        <span class="speed-title">Velocidad</span>
+        <div class="speed-track"><div class="speed-bar" id="speedBar"></div></div>
+      </div>
+      <div class="bus-banner" id="busBanner">El cuerpo sigue hacia adelante →</div>
+
       <svg class="scene" viewBox="0 0 600 360" role="img"
-           aria-label="Un bus con un pasajero de pie. Toca Frenar para ver la inercia.">
+           aria-label="Un bus con un pasajero de pie. Toca Arrancar y luego Frenar para ver la inercia.">
         <defs>
           <linearGradient id="busSky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#dbeafe"/>
-            <stop offset="1" stop-color="#f1f5f9"/>
+            <stop id="skyStop0" offset="0" stop-color="#dbeafe"/>
+            <stop id="skyStop1" offset="1" stop-color="#f1f5f9"/>
           </linearGradient>
           <linearGradient id="busBody" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stop-color="#fbbf24"/>
@@ -1466,13 +1735,17 @@ input.range {
 
         <rect width="600" height="360" fill="url(#busSky)"/>
 
-        <g fill="#c7d2fe" opacity=".75">
+        <!-- Edificios de fondo -->
+        <g id="busBuildings" fill="#c7d2fe" opacity=".75">
           <rect x="8" y="128" width="78" height="172" rx="6"/>
           <rect x="96" y="158" width="62" height="142" rx="6"/>
+          <rect x="180" y="138" width="82" height="162" rx="6"/>
+          <rect x="280" y="160" width="70" height="140" rx="6"/>
+          <rect x="375" y="126" width="75" height="174" rx="6"/>
           <rect x="472" y="120" width="70" height="180" rx="6"/>
           <rect x="552" y="176" width="46" height="124" rx="6"/>
         </g>
-        <g fill="#e0e7ff">
+        <g fill="#e0e7ff" opacity=".8">
           <rect x="20" y="144" width="16" height="20" rx="3"/>
           <rect x="46" y="144" width="16" height="20" rx="3"/>
           <rect x="20" y="178" width="16" height="20" rx="3"/>
@@ -1482,7 +1755,8 @@ input.range {
           <rect x="484" y="170" width="16" height="20" rx="3"/>
         </g>
 
-        <g id="busLayer" transform="translate(10 42)">
+        <!-- Capa del bus -->
+        <g id="busLayer" transform="translate(130 42)">
           <ellipse cx="150" cy="256" rx="164" ry="9" fill="rgba(15,23,42,.18)"/>
           <g id="bus">
             <rect x="0" y="70" width="300" height="160" rx="24" fill="url(#busBody)"/>
@@ -1518,109 +1792,202 @@ input.range {
           </g>
         </g>
 
+        <!-- Carretera y líneas que se mueven en bucle -->
         <rect y="300" width="600" height="60" fill="#334155"/>
-        <g stroke="#f8fafc" stroke-width="6" stroke-linecap="round" opacity=".75">
-          <line x1="24" y1="332" x2="76" y2="332"/>
-          <line x1="120" y1="332" x2="172" y2="332"/>
-          <line x1="216" y1="332" x2="268" y2="332"/>
-          <line x1="312" y1="332" x2="364" y2="332"/>
-          <line x1="408" y1="332" x2="460" y2="332"/>
-          <line x1="504" y1="332" x2="556" y2="332"/>
+        <g id="roadDashes" stroke="#f8fafc" stroke-width="6" stroke-linecap="round" opacity=".75">
+          <line x1="-80" y1="332" x2="-28" y2="332"/>
+          <line x1="16" y1="332" x2="68" y2="332"/>
+          <line x1="112" y1="332" x2="164" y2="332"/>
+          <line x1="208" y1="332" x2="260" y2="332"/>
+          <line x1="304" y1="332" x2="356" y2="332"/>
+          <line x1="400" y1="332" x2="452" y2="332"/>
+          <line x1="496" y1="332" x2="548" y2="332"/>
+          <line x1="592" y1="332" x2="644" y2="332"/>
+          <line x1="688" y1="332" x2="740" y2="332"/>
         </g>
+
+        <!-- Capa de lluvia animada -->
+        <g id="rainLayer" opacity="0"></g>
       </svg>
     `;
 
     controls.innerHTML = `
-      <div class="segmented" role="group" aria-label="Condición del piso">
-        <button type="button" class="seg active" data-mode="dry" aria-pressed="true">Piso seco</button>
-        <button type="button" class="seg" data-mode="wet" aria-pressed="false">Piso mojado</button>
+      <div class="pill-row">
+        <button type="button" class="pill-btn blue" id="startBusBtn">▶ Arrancar</button>
+        <button type="button" class="pill-btn red" id="brakeBusBtn" disabled>🛑 Frenar</button>
+        <button type="button" class="pill-btn seg-dry active" id="modeDryBtn">☀️ Piso seco</button>
+        <button type="button" class="pill-btn seg-wet" id="modeWetBtn">🌧️ Piso mojado</button>
       </div>
-      <button type="button" class="btn accent" id="brakeBtn">🛑 Frenar el bus</button>
     `;
 
-    const busLayer = stage.querySelector('#busLayer');
     const passenger = stage.querySelector('#passenger');
     const wheelA = stage.querySelector('#busWheelA');
     const wheelB = stage.querySelector('#busWheelB');
-    const brakeBtn = controls.querySelector('#brakeBtn');
-    const segBtns = [...controls.querySelectorAll('.seg')];
+    const roadDashes = stage.querySelector('#roadDashes');
+    const speedBar = stage.querySelector('#speedBar');
+    const busBanner = stage.querySelector('#busBanner');
+    const rainLayer = stage.querySelector('#rainLayer');
+    const skyStop0 = stage.querySelector('#skyStop0');
+    const skyStop1 = stage.querySelector('#skyStop1');
 
-    const modes = {
-      dry: {
-        dist: 120,
-        time: 1.15,
-        lean: 24,
-        msg: 'Piso seco: el bus frena en poco espacio y el pasajero se inclina hacia adelante.'
-      },
-      wet: {
-        dist: 220,
-        time: 1.75,
-        lean: 13,
-        msg: 'Piso mojado: el bus patina y avanza más antes de parar. El pasajero igual se va hacia adelante.'
-      }
-    };
+    const startBusBtn = controls.querySelector('#startBusBtn');
+    const brakeBusBtn = controls.querySelector('#brakeBusBtn');
+    const modeDryBtn = controls.querySelector('#modeDryBtn');
+    const modeWetBtn = controls.querySelector('#modeWetBtn');
 
-    let mode = 'dry';
-    let raf = 0;
-    let running = false;
-
-    function draw(x, lean) {
-      busLayer.setAttribute('transform', `translate(${x.toFixed(1)} 42)`);
-      passenger.setAttribute('transform', `rotate(${lean.toFixed(2)} 150 204)`);
-      const deg = (x * 2.4).toFixed(1);
-      wheelA.setAttribute('transform', `rotate(${deg} 60 232)`);
-      wheelB.setAttribute('transform', `rotate(${deg} 240 232)`);
+    // Generar gotas de lluvia
+    const rainDrops = [];
+    let rainHtml = '';
+    for (let r = 0; r < 36; r++) {
+      const rx = Math.random() * 620;
+      const ry = Math.random() * 360;
+      const len = 14 + Math.random() * 12;
+      const spd = 480 + Math.random() * 320;
+      rainDrops.push({ x: rx, y: ry, len, spd });
+      rainHtml += `<line id="drop_${r}" x1="${rx}" y1="${ry}" x2="${rx - 4}" y2="${ry + len}" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" opacity="0.85"/>`;
     }
+    rainLayer.innerHTML = rainHtml;
+
+    let mode = 'dry'; // 'dry' | 'wet'
+    let stateStatus = 'stopped'; // 'stopped' | 'accel' | 'cruising' | 'braking'
+    let speed = 0;
+    const CRUISE_SPEED = 280;
+    let wheelDeg = 0;
+    let roadX = 0;
+    let lean = 0;
+    let raf = 0;
+    let lastTime = performance.now();
+    let brakeStartTime = 0;
+    let brakeInitialSpeed = 0;
 
     function setMode(next) {
-      if (running) return;
       mode = next;
-      segBtns.forEach(btn => {
-        const active = btn.dataset.mode === mode;
-        btn.classList.toggle('active', active);
-        btn.setAttribute('aria-pressed', String(active));
-      });
-      draw(10, 0);
+      if (mode === 'dry') {
+        modeDryBtn.classList.add('active');
+        modeWetBtn.classList.remove('active');
+        rainLayer.setAttribute('opacity', '0');
+        skyStop0.setAttribute('stop-color', '#dbeafe');
+        skyStop1.setAttribute('stop-color', '#f1f5f9');
+      } else {
+        modeWetBtn.classList.add('active');
+        modeDryBtn.classList.remove('active');
+        rainLayer.setAttribute('opacity', '1');
+        skyStop0.setAttribute('stop-color', '#94a3b8');
+        skyStop1.setAttribute('stop-color', '#cbd5e1');
+      }
       Sound.click();
     }
 
-    function brake() {
-      if (running) return;
-      running = true;
-      brakeBtn.disabled = true;
-      segBtns.forEach(btn => { btn.disabled = true; });
-      Sound.whoosh();
+    function loop(now) {
+      const dt = Math.min(0.05, (now - lastTime) / 1000);
+      lastTime = now;
 
-      const profile = modes[mode];
-      const t0 = performance.now();
-      draw(10, 0);
+      // Actualizar lluvia si está en piso mojado
+      if (mode === 'wet') {
+        rainDrops.forEach((d, r) => {
+          d.y += d.spd * dt;
+          d.x -= 85 * dt;
+          if (d.y > 370) {
+            d.y = -20;
+            d.x = Math.random() * 630;
+          }
+          const line = stage.querySelector(`#drop_${r}`);
+          if (line) {
+            line.setAttribute('x1', d.x.toFixed(1));
+            line.setAttribute('y1', d.y.toFixed(1));
+            line.setAttribute('x2', (d.x - 4).toFixed(1));
+            line.setAttribute('y2', (d.y + d.len).toFixed(1));
+          }
+        });
+      }
 
-      function frame(now) {
-        const t = Math.min(1, (now - t0) / (profile.time * 1000));
-        const x = 10 + profile.dist * (1 - Math.pow(1 - t, 2.1));
-        const leanT = t < 0.72
-          ? easeOutCubic(t / 0.72)
-          : 1 - easeInOutCubic((t - 0.72) / 0.28);
-        draw(x, profile.lean * Math.max(0, leanT));
+      // Máquina de estados del bus
+      if (stateStatus === 'accel') {
+        speed = Math.min(CRUISE_SPEED, speed + (CRUISE_SPEED / 0.8) * dt);
+        // Al arrancar, el pasajero se inclina ligeramente hacia atrás por inercia
+        const accelProgress = speed / CRUISE_SPEED;
+        lean = -6 * Math.sin(accelProgress * Math.PI);
+        if (speed >= CRUISE_SPEED) {
+          stateStatus = 'cruising';
+          lean = 0;
+          result.textContent = 'El bus va en marcha a velocidad constante. Toca «Frenar» para observar la inercia.';
+        }
+      } else if (stateStatus === 'braking') {
+        const brakeDuration = mode === 'dry' ? 1.15 : 2.05;
+        const elapsed = (now - brakeStartTime) / 1000;
+        const progress = Math.min(1, elapsed / brakeDuration);
 
-        if (t < 1) {
-          raf = requestAnimationFrame(frame);
-        } else {
-          running = false;
-          brakeBtn.disabled = false;
-          segBtns.forEach(btn => { btn.disabled = false; });
-          result.textContent = profile.msg;
+        // Desaceleración
+        speed = Math.max(0, brakeInitialSpeed * (1 - easeOutCubic(progress)));
+
+        // Inclinación hacia adelante
+        const maxLean = mode === 'dry' ? 26 : 14;
+        const leanT = progress < 0.65
+          ? easeOutCubic(progress / 0.65)
+          : 1 - easeInOutCubic((progress - 0.65) / 0.35);
+        lean = maxLean * Math.max(0, leanT);
+
+        if (progress >= 1 || speed <= 0) {
+          speed = 0;
+          lean = 0;
+          stateStatus = 'stopped';
+          startBusBtn.disabled = false;
+          brakeBusBtn.disabled = true;
+          startBusBtn.innerHTML = '▶ Arrancar';
+
+          if (mode === 'dry') {
+            result.textContent = 'Piso seco: frenado en seco. El bus paró rápido y el cuerpo del pasajero siguió hacia adelante por inercia.';
+          } else {
+            result.textContent = 'Piso mojado: poca fricción. El bus patinó y avanzó más antes de detenerse. El pasajero igual se fue hacia adelante.';
+          }
           onGoal();
         }
       }
 
-      raf = requestAnimationFrame(frame);
+      // Renderizar movimiento continuo de ruedas y carretera
+      if (speed > 0) {
+        roadX = (roadX - speed * 1.5 * dt) % 96;
+        roadDashes.setAttribute('transform', `translate(${roadX.toFixed(1)} 0)`);
+        wheelDeg = (wheelDeg + speed * 2.4 * dt) % 360;
+        wheelA.setAttribute('transform', `rotate(${wheelDeg.toFixed(1)} 60 232)`);
+        wheelB.setAttribute('transform', `rotate(${wheelDeg.toFixed(1)} 240 232)`);
+      }
+
+      passenger.setAttribute('transform', `rotate(${lean.toFixed(2)} 150 204)`);
+      speedBar.style.width = `${((speed / CRUISE_SPEED) * 100).toFixed(1)}%`;
+
+      raf = requestAnimationFrame(loop);
     }
 
-    segBtns.forEach(btn => btn.addEventListener('click', () => setMode(btn.dataset.mode)));
-    brakeBtn.addEventListener('click', brake);
-    result.textContent = 'Elige el piso y toca «Frenar el bus».';
-    draw(10, 0);
+    function startBus() {
+      if (stateStatus === 'accel' || stateStatus === 'cruising') return;
+      stateStatus = 'accel';
+      startBusBtn.disabled = true;
+      brakeBusBtn.disabled = false;
+      busBanner.classList.remove('show');
+      Sound.whoosh();
+      result.textContent = 'El bus está acelerando…';
+    }
+
+    function brakeBus() {
+      if (stateStatus !== 'cruising' && stateStatus !== 'accel') return;
+      stateStatus = 'braking';
+      brakeStartTime = performance.now();
+      brakeInitialSpeed = speed;
+      brakeBusBtn.disabled = true;
+      busBanner.classList.add('show');
+      Sound.whoosh();
+      result.textContent = 'Frenando el bus…';
+    }
+
+    startBusBtn.addEventListener('click', startBus);
+    brakeBusBtn.addEventListener('click', brakeBus);
+    modeDryBtn.addEventListener('click', () => setMode('dry'));
+    modeWetBtn.addEventListener('click', () => setMode('wet'));
+
+    result.textContent = 'Toca «Arrancar» para poner el bus en movimiento.';
+    lastTime = performance.now();
+    raf = requestAnimationFrame(loop);
 
     return () => cancelAnimationFrame(raf);
   }
@@ -1697,7 +2064,16 @@ input.range {
     `;
 
     controls.innerHTML = `
-      <button type="button" class="btn accent" id="pushBtn">💪 Empujar los dos con la misma fuerza</button>
+      <div class="carts-bar">
+        <div class="force-control">
+          <label for="forceRange" class="force-label">Fuerza del empujón: <strong id="forceVal">3</strong></label>
+          <input type="range" id="forceRange" min="1" max="5" value="3" step="1" class="force-slider">
+        </div>
+        <div class="carts-actions">
+          <button type="button" class="pill-btn blue" id="pushBtn">👉 Empujar los dos</button>
+          <button type="button" class="pill-btn blue" id="resetBtn">↺ Reiniciar</button>
+        </div>
+      </div>
     `;
 
     const cartE = stage.querySelector('#cartEmpty');
@@ -1708,7 +2084,16 @@ input.range {
     ].map(([sel, cx, cy]) => ({ el: stage.querySelector(sel), cx, cy }));
 
     const pushBtn = controls.querySelector('#pushBtn');
+    const resetBtn = controls.querySelector('#resetBtn');
+    const forceRange = controls.querySelector('#forceRange');
+    const forceVal = controls.querySelector('#forceVal');
+
     let raf = 0;
+    let running = false;
+
+    forceRange.addEventListener('input', () => {
+      forceVal.textContent = forceRange.value;
+    });
 
     function place(dxE, dxF) {
       cartE.setAttribute('transform', `translate(${(100 + dxE).toFixed(1)} 96)`);
@@ -1722,18 +2107,23 @@ input.range {
     }
 
     function push() {
-      if (pushBtn.disabled) return;
+      if (running) return;
+      running = true;
       pushBtn.disabled = true;
-      result.textContent = 'Misma fuerza para los dos carritos…';
+      forceRange.disabled = true;
+
+      const F = Number(forceRange.value);
+      result.textContent = `Aplicando fuerza ${F} a ambos carritos…`;
       Sound.whoosh();
       place(0, 0);
 
       const t0 = performance.now();
-      const DURATION = 1.6;
-      const empty = { v0: 340, a: 250 };
-      const full = { v0: 200, a: 250 };
+      // Con más fuerza, mayor velocidad inicial
+      const empty = { v0: 120 + F * 62, a: 220 };
+      const full = { v0: 65 + F * 33, a: 220 };
       const maxE = (empty.v0 * empty.v0) / (2 * empty.a);
       const maxF = (full.v0 * full.v0) / (2 * full.a);
+      const duration = Math.max(empty.v0 / empty.a, full.v0 / full.a) + 0.15;
 
       function frame(now) {
         const t = (now - t0) / 1000;
@@ -1743,12 +2133,13 @@ input.range {
         const dxF = clamp(full.v0 * tF - 0.5 * full.a * tF * tF, 0, maxF);
         place(dxE, dxF);
 
-        if (t < DURATION) {
+        if (t < duration) {
           raf = requestAnimationFrame(frame);
         } else {
-          result.textContent = 'El carrito vacío avanzó mucho más: con la misma fuerza, menos masa significa más aceleración.';
+          running = false;
           pushBtn.disabled = false;
-          pushBtn.textContent = '🔁 Empujar otra vez';
+          forceRange.disabled = false;
+          result.textContent = `Con fuerza ${F}: el carrito vacío aceleró mucho más y llegó más lejos porque tiene menos masa (F = m · a).`;
           onGoal();
         }
       }
@@ -1756,9 +2147,20 @@ input.range {
       raf = requestAnimationFrame(frame);
     }
 
+    function reset() {
+      cancelAnimationFrame(raf);
+      running = false;
+      pushBtn.disabled = false;
+      forceRange.disabled = false;
+      place(0, 0);
+      result.textContent = 'Elige la fuerza del empujón y toca «Empujar los dos».';
+      Sound.click();
+    }
+
     pushBtn.addEventListener('click', push);
-    result.textContent = 'Toca el botón para empujar los dos carritos con la misma fuerza.';
+    resetBtn.addEventListener('click', reset);
     place(0, 0);
+    result.textContent = 'Elige la fuerza del empujón y toca «Empujar los dos».';
 
     return () => cancelAnimationFrame(raf);
   }
@@ -1914,17 +2316,32 @@ input.range {
           </div>
         </div>
       </div>
-      <p class="drag-hint">👆 Desliza y suelta</p>
+      <p class="drag-hint">👆 Desliza con el dedo o toca «Deslizar»</p>
     `;
 
     controls.innerHTML = `
-      <div class="range-label">
-        <label for="friction">Fricción: <strong id="frictionLabel">media</strong></label>
+      <div class="phone-flick-wrap">
+        <button type="button" class="pill-btn blue" id="slideBtn">👉 Deslizar</button>
       </div>
-      <input class="range" id="friction" type="range" min="0" max="100" value="45" step="1">
-      <div class="range-ends" aria-hidden="true">
-        <span>Se desliza mucho</span>
-        <span>Se frena rápido</span>
+
+      <div class="speed-indicator-wrap">
+        <span class="speed-indicator-title">Velocidad de la lista</span>
+        <div class="speed-indicator-track">
+          <div class="speed-indicator-bar" id="listSpeedBar"></div>
+        </div>
+      </div>
+
+      <div class="friction-control-box">
+        <div class="range-label">
+          <label for="friction">Fricción: <strong id="frictionLabel">Medio</strong></label>
+        </div>
+        <input class="range compact-range" id="friction" type="range" min="1" max="4" value="2" step="1">
+        <div class="range-steps-4" aria-hidden="true">
+          <span>Bajo</span>
+          <span>Medio</span>
+          <span>Alto</span>
+          <span>Muy alto</span>
+        </div>
       </div>
     `;
 
@@ -1932,10 +2349,12 @@ input.range {
     const list = stage.querySelector('#phoneList');
     const friction = controls.querySelector('#friction');
     const frictionLabel = controls.querySelector('#frictionLabel');
+    const slideBtn = controls.querySelector('#slideBtn');
+    const listSpeedBar = controls.querySelector('#listSpeedBar');
 
     screen.tabIndex = 0;
     screen.setAttribute('role', 'group');
-    screen.setAttribute('aria-label', 'Lista de compras. Desliza con el dedo, la rueda del mouse o las flechas arriba y abajo.');
+    screen.setAttribute('aria-label', 'Lista de compras. Desliza con el dedo, la rueda del mouse o toca Deslizar.');
 
     let offset = 0;
     let velocity = 0;
@@ -1943,20 +2362,29 @@ input.range {
     let raf = 0;
     let drag = null;
     let flingDone = false;
+    let slideDirection = -1;
 
     function bounds() {
-      minY = Math.min(0, screen.clientHeight - list.scrollHeight);
+      const ch = screen.clientHeight || 304;
+      const sh = list.scrollHeight || 756;
+      minY = Math.min(0, ch - sh);
     }
 
     function apply() {
       list.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
     }
 
+    function setSpeedBar(spd) {
+      const pct = Math.min(100, Math.max(0, (spd / 850) * 100));
+      listSpeedBar.style.width = pct.toFixed(1) + '%';
+    }
+
     function frictionWord() {
       const v = Number(friction.value);
-      if (v < 34) return 'baja';
-      if (v < 67) return 'media';
-      return 'alta';
+      if (v === 1) return 'Bajo';
+      if (v === 2) return 'Medio';
+      if (v === 3) return 'Alto';
+      return 'Muy alto';
     }
 
     function updateFrictionLabel() {
@@ -1974,35 +2402,74 @@ input.range {
       onGoal();
     }
 
+    function getTau() {
+      const v = Number(friction.value);
+      // 1: Bajo (se desliza mucho), 2: Medio, 3: Alto, 4: Muy alto (frena rápido)
+      const map = { 1: 0.85, 2: 0.50, 3: 0.26, 4: 0.11 };
+      return map[v] || 0.50;
+    }
+
     function startInertia() {
       stopInertia();
       let v = velocity;
       let last = performance.now();
+      const tau = getTau();
 
       function frame(now) {
         const dt = Math.min(0.05, (now - last) / 1000);
         last = now;
 
-        if (Math.abs(v) < 20) {
+        if (Math.abs(v) < 14) {
           v = 0;
           velocity = 0;
+          setSpeedBar(0);
           return;
         }
 
-        const level = Number(friction.value) / 100;
-        const tau = 0.9 - 0.82 * level;
         v *= Math.exp(-dt / tau);
         offset += v * dt;
 
-        if (offset > 0) { offset = 0; v = 0; }
-        if (offset < minY) { offset = minY; v = 0; }
+        if (offset >= 0) {
+          offset = 0;
+          v = 0;
+          slideDirection = -1; // Al terminar arriba se invierte hacia abajo
+        }
+        if (offset <= minY) {
+          offset = minY;
+          v = 0;
+          slideDirection = 1;  // Al terminar abajo se invierte hacia arriba
+        }
 
+        setSpeedBar(Math.abs(v));
         apply();
-        raf = requestAnimationFrame(frame);
+
+        if (Math.abs(v) >= 14) {
+          raf = requestAnimationFrame(frame);
+        } else {
+          v = 0;
+          velocity = 0;
+          setSpeedBar(0);
+        }
       }
 
       raf = requestAnimationFrame(frame);
     }
+
+    slideBtn.addEventListener('click', () => {
+      stopInertia();
+      bounds();
+      // Si estamos cerca de los extremos, invertir para asegurar movimiento continuo
+      if (offset <= minY + 20) {
+        slideDirection = 1;
+      } else if (offset >= -20) {
+        slideDirection = -1;
+      }
+      velocity = slideDirection * 650;
+      setSpeedBar(650);
+      Sound.whoosh();
+      unlockByScroll();
+      startInertia();
+    });
 
     screen.addEventListener('pointerdown', event => {
       if (event.button !== undefined && event.button !== 0) return;
@@ -2011,6 +2478,7 @@ input.range {
       offset = clamp(offset, minY, 0);
       apply();
       velocity = 0;
+      setSpeedBar(0);
       drag = {
         startY: event.clientY,
         startOffset: offset,
@@ -2030,7 +2498,8 @@ input.range {
       const dt = Math.max(1, now - drag.lastT);
 
       offset = clamp(drag.startOffset + (event.clientY - drag.startY), minY, 0);
-      velocity = 0.75 * velocity + 0.25 * (dy / dt) * 1000;
+      velocity = 0.7 * velocity + 0.3 * (dy / dt) * 1000;
+      setSpeedBar(Math.abs(velocity));
 
       drag.lastY = event.clientY;
       drag.lastT = now;
@@ -2039,7 +2508,10 @@ input.range {
 
     function endDrag(event) {
       if (!drag) return;
-      if (performance.now() - drag.lastT > 120) velocity = 0;
+      if (performance.now() - drag.lastT > 120) {
+        velocity = 0;
+        setSpeedBar(0);
+      }
       drag = null;
       screen.style.cursor = 'grab';
       try {
@@ -2048,7 +2520,9 @@ input.range {
         }
       } catch (_) { /* ignorar */ }
 
-      if (Math.abs(velocity) > 260) unlockByScroll();
+      if (Math.abs(velocity) > 200) unlockByScroll();
+      if (offset <= minY + 20) slideDirection = 1;
+      else if (offset >= -20) slideDirection = -1;
 
       startInertia();
     }
@@ -2075,6 +2549,9 @@ input.range {
         const step = key === 'PageDown' || key === 'PageUp' ? screen.clientHeight * 0.8 : 60;
         const delta = key === 'ArrowDown' || key === 'PageDown' ? -step : step;
         offset = clamp(offset + delta, minY, 0);
+        velocity = delta * 8;
+        setSpeedBar(Math.abs(velocity));
+        setTimeout(() => setSpeedBar(0), 180);
       } else {
         return;
       }
@@ -2087,6 +2564,9 @@ input.range {
       stopInertia();
       bounds();
       offset = clamp(offset - event.deltaY, minY, 0);
+      velocity = -event.deltaY * 5;
+      setSpeedBar(Math.abs(velocity));
+      setTimeout(() => setSpeedBar(0), 180);
       apply();
       unlockByScroll();
     }, { passive: false });
@@ -2107,6 +2587,7 @@ input.range {
     bounds();
     apply();
     updateFrictionLabel();
+    setSpeedBar(0);
     result.textContent = 'Desliza la lista con el dedo (o el mouse) y suéltala.';
 
     return () => {
