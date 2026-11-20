@@ -1,4 +1,4 @@
-# Actividad-interactiva-mecanica-2
+# Actividad-interactiva-mecanica pro
 Aplicativo para aprender jugando, sobrio la mecanica. Juego web de 4 niveles para aprender las leyes de Newton con ejemplos cotidianos:
 
 El bus que frena — primera ley (inercia)
